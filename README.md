@@ -2,7 +2,7 @@
 
 `luci-app-run` 是一个轻量级的 OpenWrt LuCI 应用，用于上传并运行由 makeself 生成的 `.run` 安装程序。
 
-它仅接受用户上传的 `.run` 文件，将其保存到 `/tmp/luci-app-run` 目录，赋予可执行权限，在后台运行该安装程序，并将执行日志实时返回到 LuCI 页面。
+它仅接受用户上传的 `.run`或`.sh` 文件，将其保存到 `/tmp/luci-app-run` 目录，赋予可执行权限，在后台运行该安装程序，并将执行日志实时返回到 LuCI 页面。
 
 对于较大文件的上传，采用独立的 CGI 接口 `/cgi-bin/luci-app-run-upload` 进行一次性令牌验证的二进制上传，避免使用 base64-over-ubus 分块传输，从而获得接近原生 HTTP 的上传速度。
 
@@ -29,4 +29,9 @@ wget -O toggle.sh https://cafe.cpolar.cn/wkdaily/cool/raw/branch/master/apk-untr
 
 ### Luci 21——24.10 
 - 在系统——软件包 上传安装ipk
+
+
+### 程序截图
+<img width="3818" height="1488" alt="image" src="https://github.com/user-attachments/assets/803419b2-caab-4315-975b-6efc2d5e2212" />
+
 
