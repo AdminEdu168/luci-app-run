@@ -10,10 +10,10 @@ function loadI18N() {
 	if (I18N)
 		return Promise.resolve();
 
-	return new Promise(function(resolve, reject) {
+	return new Promise(function (resolve, reject) {
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', '/luci-static/resources/view/run/i18n.json', true);
-		xhr.onload = function() {
+		xhr.onload = function () {
 			if (xhr.status >= 200 && xhr.status < 300) {
 				try {
 					I18N = JSON.parse(xhr.responseText);
@@ -25,7 +25,7 @@ function loadI18N() {
 				reject(new Error('Failed to load i18n.json'));
 			}
 		};
-		xhr.onerror = function() {
+		xhr.onerror = function () {
 			reject(new Error('Network error loading i18n.json'));
 		};
 		xhr.send();
@@ -226,7 +226,7 @@ return view.extend({
 
 		var pickButton = E('button', {
 			class: 'cbi-button cbi-button-apply run-btn',
-			style: 'background:#333!important;background-image:none!important;color:#fff!important;border-color:#333!important',
+			style: 'background:#333!important;background-color:#333!important;background-image:none!important;color:#fff!important;border-color:#333!important;box-shadow:none!important;text-shadow:none!important;opacity:1!important',
 			click: function (ev) {
 				ev.preventDefault();
 				fileInput.click();
@@ -235,7 +235,7 @@ return view.extend({
 
 		var ipkButton = E('button', {
 			class: 'cbi-button cbi-button-add run-btn',
-			style: 'margin-left:10px;background:#2E7D32!important;background-image:none!important;color:#fff!important;border-color:#2E7D32!important',
+			style: 'margin-left:10px;background:#2E7D32!important;background-color:#2E7D32!important;background-image:none!important;color:#fff!important;border-color:#2E7D32!important;box-shadow:none!important;text-shadow:none!important;opacity:1!important',
 			click: function (ev) {
 				ev.preventDefault();
 				ipkInput.click();
@@ -244,7 +244,7 @@ return view.extend({
 
 		var apkButton = E('button', {
 			class: 'cbi-button cbi-button-add run-btn',
-			style:'margin-left:10px;background:#1565C0!important;background-image:none!important;color:#fff!important;border-color:#1565C0!important',
+			style: 'margin-left:10px;background:#1565C0!important;background-color:#1565C0!important;background-image:none!important;color:#fff!important;border-color:#1565C0!important;box-shadow:none!important;text-shadow:none!important;opacity:1!important',
 			click: function (ev) {
 				ev.preventDefault();
 				apkInput.click();
