@@ -225,7 +225,7 @@ return view.extend({
 		}, ['']);
 
 		var pickButton = E('button', {
-			class: 'btn cbi-button cbi-button-apply',
+			class: 'cbi-button cbi-button-apply run-btn',
 			style: 'background-color:#333!important;color:white!important;border-color:#333!important',
 			click: function (ev) {
 				ev.preventDefault();
@@ -234,7 +234,7 @@ return view.extend({
 		}, [_('choose_file')]);
 
 		var ipkButton = E('button', {
-			class: 'btn cbi-button cbi-button-add',
+			class: 'cbi-button cbi-button-add run-btn',
 			style: 'margin-left:10px;background-color:#2E7D32!important;color:white!important',
 			click: function (ev) {
 				ev.preventDefault();
@@ -243,7 +243,7 @@ return view.extend({
 		}, [_('choose_ipk')]);
 
 		var apkButton = E('button', {
-			class: 'btn cbi-button cbi-button-add',
+			class: 'cbi-button cbi-button-add run-btn',
 			style: 'margin-left:10px;background-color:#1565C0!important;color:white!important',
 			click: function (ev) {
 				ev.preventDefault();
@@ -252,7 +252,7 @@ return view.extend({
 		}, [_('choose_apk')]);
 
 		var runButton = E('button', {
-			class: 'btn cbi-button cbi-button-action',
+			class: 'cbi-button cbi-button-action run-btn',
 			disabled: true,
 			style: 'min-width:140px;margin-left:15px;',
 			click: function (ev) {
@@ -262,7 +262,7 @@ return view.extend({
 		}, [_('execute')]);
 
 		var cleanButton = E('button', {
-			class: 'btn cbi-button cbi-button-reset',
+			class: 'cbi-button cbi-button-reset run-btn',
 			style: 'margin-left:35px;',
 			click: function (ev) {
 				ev.preventDefault();
