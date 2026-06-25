@@ -517,6 +517,7 @@ case "$1" in
             upload_chunk) upload_chunk ;;
             upload_finish) upload_finish ;;
             run) run_installer ;;
+            download_run) download_run ;;
             status) status ;;
             read_log) read_log ;;
             cleanup) cleanup ;;
